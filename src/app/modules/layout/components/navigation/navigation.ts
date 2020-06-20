@@ -18,5 +18,5 @@ export interface NavigationItem
         bg?: string;
         fg?: string;
     };
-    children?: navigationItem[];
+    children?: NavigationItem[];
 }

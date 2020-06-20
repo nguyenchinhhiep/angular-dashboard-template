@@ -1,7 +1,7 @@
 import { ChangeDetectorRef, Component, HostBinding, Input, OnDestroy, OnInit } from '@angular/core';
 import { merge, Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
-import { NavigationItem } from '../../navigation.model';
+import { NavigationItem } from '../../navigation';
 import { NavigationService } from '../../navigation.service';
 
 @Component({

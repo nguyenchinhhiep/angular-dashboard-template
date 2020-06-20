@@ -68,7 +68,7 @@ export class SidebarComponent implements OnInit, OnDestroy
 
   // Private
   private _folded: boolean;
-  private _fuseConfig: any;
+  private _layoutConfig: any;
   private _wasActive: boolean;
   private _wasFolded: boolean;
   private _backdrop: HTMLElement | null = null;
@@ -215,7 +215,7 @@ export class SidebarComponent implements OnInit, OnDestroy
       this._layoutConfigService.config
           .pipe(takeUntil(this._unsubscribeAll))
           .subscribe((config) => {
-              this._fuseConfig = config;
+              this._layoutConfig = config;
           });
 
       // Register the sidebar
