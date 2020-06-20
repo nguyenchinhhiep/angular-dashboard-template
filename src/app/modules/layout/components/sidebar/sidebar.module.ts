@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
+import { SidebarComponent } from './sidebar.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [SidebarComponent],
   imports: [],
-  exports: []
+  exports: [SidebarComponent]
 })
 export class SidebarModule {}
