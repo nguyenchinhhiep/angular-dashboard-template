@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import * as _ from 'lodash';
-import { NavigationItem } from './navigation';
+import { NavigationItem } from './navigation.model';
 
 @Injectable({
     providedIn: 'root'

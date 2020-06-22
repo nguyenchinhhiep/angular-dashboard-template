@@ -5,7 +5,7 @@ import { LayoutConfigService } from './modules/layout/services/config.service';
 import { NavigationService } from './modules/layout/components/navigation/navigation.service';
 import { SidebarService } from './modules/layout/components/sidebar/sidebar.service';
 import { Platform } from '@angular/cdk/platform';
-import { navigation } from './modules/layout/components/navigation';
+import { navigation } from './modules/layout/components/navigation/navigation';
 import { takeUntil } from 'rxjs/operators';
 
 @Component({

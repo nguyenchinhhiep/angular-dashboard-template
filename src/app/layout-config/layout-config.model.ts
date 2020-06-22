@@ -1,4 +1,4 @@
-export interface ThemeConfigModel {
+export interface LayoutConfigModel {
   colorTheme: string;
   layout: {
     header: {

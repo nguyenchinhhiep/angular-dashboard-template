@@ -1,6 +1,6 @@
-import { ThemeConfigModel } from './config';
+import { LayoutConfigModel } from './layout-config.model';
 
-export const config: ThemeConfigModel = {
+export const layoutConfig: LayoutConfigModel = {
   colorTheme: "theme-default",
   layout: {
     header: {

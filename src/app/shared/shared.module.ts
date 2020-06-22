@@ -7,9 +7,8 @@ import { BrowserModule } from '@angular/platform-browser';
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule,
-    BrowserModule
+    CommonModule
   ],
-  exports: [CommonModule, BrowserModule]
+  exports: [CommonModule]
 })
 export class SharedModule { }
