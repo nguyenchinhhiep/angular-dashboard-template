@@ -1,0 +1,13 @@
+<button mat-flat-button class="language-selector__toggle" [matMenuTriggerFor]="languageMenu">
+  <span>{{selectedLanguage.id}}</span>
+</button>
+<mat-menu #languageMenu="matMenu" class="language-selector__dropdown">
+  <ul class="language-selector__list">
+    <li mat-menu-item class="language-selector__item" *ngFor="let lang of languages; index as i" (click)="onLanguageChange(i)">
+      <img class="language-selector__image" src="assets/images/languages/{{lang.flag}}.png" alt="{{lang.title}}">
+      <div class="language-selector__title">
+        {{lang.title}}
+      </div>
+    </li>
+  </ul>
+</mat-menu>

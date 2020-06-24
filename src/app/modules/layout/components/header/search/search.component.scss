@@ -1,0 +1,12 @@
+.search {
+  display: flex;
+  
+  &__toggle {
+    background: transparent;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+  }
+}

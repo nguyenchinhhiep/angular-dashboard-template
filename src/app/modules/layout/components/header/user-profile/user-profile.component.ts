@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, ViewChild, HostBinding } from '@angular/core';
 
 @Component({
   selector: 'user-profile',
@@ -7,6 +7,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class UserProfileComponent implements OnInit {
+  @HostBinding("class") classes = "user-profile";
 
   constructor() { }
 

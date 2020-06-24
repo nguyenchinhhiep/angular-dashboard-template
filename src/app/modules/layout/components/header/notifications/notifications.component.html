@@ -1,0 +1,70 @@
+<button mat-flat-button [matMenuTriggerFor]="notifications" class="notifications__toggle">
+  <mat-icon>notifications</mat-icon>
+</button>
+<mat-menu #notifications="matMenu" class="notifications__dropdown">
+  <div class="notifications__dropdown-header">
+    <span>Notifications</span>
+    <span class="mark-as-read">
+      Mark all as read
+    </span>
+  </div>
+  <div class="notifications__body">
+    <ul class="notifications__list">
+      <li class="notifications__item">
+        <a>
+          <div class="notifications__item-image">
+            <img src="assets/images/human/male-1.jpg" alt="">
+          </div>
+          <div class="notifications__item-content">
+            <strong>Hiep Nguyen</strong> marked the task as done
+            <div class="time">
+              a day ago
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="notifications__item">
+        <a>
+          <div class="notifications__item-image">
+            <img src="assets/images/human/female-1.jpg" alt="">
+          </div>
+          <div class="notifications__item-content">
+            <strong>Dong Hieu</strong> answered to your comment on the  Cash Flow Forecast's graph
+            <div class="time">
+              20 minutes ago
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="notifications__item">
+        <a>
+          <div class="notifications__item-image">
+            <img src="assets/images/human/male-1.jpg" alt="">
+          </div>
+          <div class="notifications__item-content">
+            <strong>Hiep Nguyen</strong> marked the task as done
+            <div class="time">
+              a day ago
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="notifications__item">
+        <a>
+          <div class="notifications__item-image">
+            <img src="assets/images/human/female-1.jpg" alt="">
+          </div>
+          <div class="notifications__item-content">
+            <strong>Dong Hieu</strong> answered to your comment on the  Cash Flow Forecast's graph
+            <div class="time">
+              20 minutes ago
+            </div>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="notifications__footer">
+    <span>View All</span>
+  </div>
+</mat-menu>

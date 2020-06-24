@@ -1,16 +1,48 @@
-user-profile {
-  margin-left: auto;
+.user-profile {
   display: flex;
 
-  .user__toggle {
+  &__toggle {
     background: transparent;
     border-radius: 0;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #fff;
 
     img {
       border-radius: 50%;
     }
   }
+
+
+
+  &__dropdown-header {
+    font-size: 1.4rem;
+    padding: 1rem 1.6rem;
+    border-bottom: 1px solid #eee;
+ 
+
+    span {
+      display: block;
+    }
+
+    .email {
+      font-size: 1.3rem;
+      font-weight: 500;
+    }
+  }
+
+  &__body {
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+
+    ul {
+      margin: 0;
+    }
+  }
+
+  &__footer {
+    padding-top: 1rem;
+  }
+
 }

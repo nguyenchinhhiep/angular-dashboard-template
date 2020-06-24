@@ -4,13 +4,13 @@
     flex-shrink: 0;
   }
 
-  header {
+  .header {
     height: 6.4rem;
     display: flex;
     background-color: #1976d2;
     color: #fff;
 
-    .header__inner {
+    &__inner {
       flex-grow: 1;
       display: flex;
 
@@ -30,5 +30,11 @@
         }
       }
     }
+
+    &__right {
+      margin-left: auto;
+      display: flex;
+    }
+
   }
 }
