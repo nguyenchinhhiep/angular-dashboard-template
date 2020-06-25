@@ -1,12 +1,36 @@
 .search {
   display: flex;
+  align-items: center;
+  margin-right: 1rem;
   
-  &__toggle {
-    background: transparent;
-    border-radius: 0;
+  &__inner {
+    position: relative;
     display: flex;
+  }
+
+  &__icon {
+    position: absolute;
+    left: .5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.8rem;
+    display: flex !important;
     align-items: center;
     justify-content: center;
-    color: #fff;
+  }
+
+  &__input {
+    border: 1px solid;
+    border-radius: 1.6rem;
+    width: 16rem;
+    display: inline-block;
+    padding: 0 1.6rem 0 3.2rem;
+    height: 3.2rem;
+    font-size: 1.4rem;
+    transition: width ease .3s;
+
+    &:focus {
+      width: 20rem;
+    }
   }
 }

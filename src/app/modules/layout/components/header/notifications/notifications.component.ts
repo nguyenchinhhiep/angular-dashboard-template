@@ -10,6 +10,8 @@ export class NotificationsComponent implements OnInit {
 
   @HostBinding("class") classes = "notifications";
 
+  isOpen = false;
+
   constructor() { }
 
   ngOnInit(): void {

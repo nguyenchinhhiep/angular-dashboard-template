@@ -1,0 +1,41 @@
+@mixin user-profile-theme($theme) {
+
+  @each $theme, $value in $themes {
+      $background: map-get($value, background );
+      $primary: map-get($value, primary );
+      $text-base: map-get($value, text-base);
+      $text-primary: map-get($value, text-primary);
+      $text-secondary: map-get($value, text-secondary );
+      $accent: map-get($value, accent);
+      $icon-primary: map-get($value, icon-primary);
+      $icon-secondary: map-get($value, icon-secondary);
+      $border-color-primary: map-get($value, border-color-primary);
+      $border-color-secondary: map-get($value, border-color-secondary);
+
+      .#{$theme} {
+
+          .user-profile {
+              
+            &__dropdown-header, &__dropdown-body {
+              border-color: $border-color-secondary !important;
+            }
+
+            &__dropdown {
+
+              mat-icon {
+                color: $icon-secondary;
+              }
+
+              &-item {
+                 
+                 span {
+                  color: $text-primary;
+                }
+              }
+            }
+          }
+      }
+       
+  }
+  
+}

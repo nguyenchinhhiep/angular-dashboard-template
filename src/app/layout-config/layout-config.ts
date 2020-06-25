@@ -1,7 +1,7 @@
 import { LayoutConfigModel } from './layout-config.model';
 
 export const layoutConfig: LayoutConfigModel = {
-  colorTheme: "theme-default",
+  colorTheme: "light",
   layout: {
     header: {
       hidden: false

@@ -1,0 +1,47 @@
+@import "src/app/modules/layout/components/header/header.theme";
+@import "src/app/modules/layout/components/header/notifications/notifications.theme";
+@import "src/app/modules/layout/components/header/user-profile/user-profile.theme";
+@import "src/app/modules/layout/components/header/language-selector/language-selector.theme";
+@import "src/app/modules/layout/components/header/search/search.theme.scss";
+@import './../base/common';
+
+$themes: (
+  'light': (
+    'primary': #ff0000,
+    "text-base": #212121,
+    'text-primary':#030303,
+    'text-secondary':#64748b,
+    "icon-primary": #606060,
+    "icon-secondary": #909090,
+    'accent': #065fd4,
+    'background': #fff,
+    'border-color-primary':#cbd4db,
+    'border-color-secondary':#e8ecee
+  ),
+  'dark': (
+    'primary': #ff0000,
+    "text-base": #fff,
+    'text-primary':#fff,
+    'text-secondary':#AAAAAA,
+    "icon-primary": #909090,
+    "icon-secondary": #909090,
+    'accent': #3EA6FF,
+    'background': #212121,
+    'border-color-primary': #4e4e4e,
+    'border-color-secondary': #4e4e4e
+  )
+);
+
+// Layout Theme
+@mixin layout-theme($themes) {
+  @include header-theme($themes);
+  @include notifications-theme($themes);
+  @include language-selector-theme($themes);
+  @include user-profile-theme($themes);
+  @include search-theme($themes)
+}
+
+@include layout-theme($themes);
+
+// Common Theme
+@include common-theme($themes);

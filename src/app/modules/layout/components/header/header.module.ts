@@ -9,10 +9,11 @@ import { NotificationsComponent } from './notifications/notifications.component'
 import { SearchComponent } from './search/search.component';
 import { LanguageSelectorComponent } from './language-selector/language-selector.component';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { OverlayModule } from '@angular/cdk/overlay';
 
 @NgModule({
   declarations: [HeaderComponent, UserProfileComponent, NotificationsComponent, SearchComponent, LanguageSelectorComponent],
-  imports: [MatButtonModule, MatMenuModule, MatIconModule, SharedModule],
+  imports: [MatButtonModule, MatMenuModule, MatIconModule,OverlayModule, SharedModule],
   exports: [HeaderComponent]
 })
 export class HeaderModule { }
