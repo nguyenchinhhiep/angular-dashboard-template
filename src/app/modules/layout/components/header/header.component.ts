@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, HostBinding } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,7 +7,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class HeaderComponent implements OnInit {
-
+  @HostBinding("class") classes = "header border-secondary";
   constructor() { }
 
   ngOnInit(): void {

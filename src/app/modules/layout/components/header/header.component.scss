@@ -1,12 +1,9 @@
 .dashboard__container {
-  
-  app-header {
-    flex-shrink: 0;
-  }
 
   .header {
     height: 5.6rem;
     display: flex;
+    width: 100%;
     border-bottom: 1px solid;
 
     &__inner {
@@ -37,7 +34,7 @@
       display: flex;
     }
 
-    &__toggle-dropdown {
+    .toggle-dropdown {
       background: transparent;
       border-radius: 0;
       display: flex;

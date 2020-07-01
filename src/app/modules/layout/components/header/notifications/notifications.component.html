@@ -1,124 +1,19 @@
-<button (click)="isOpen = !isOpen" cdkOverlayOrigin #trigger="cdkOverlayOrigin"
-  class="notifications__toggle header__toggle-dropdown">
+<button #origin (click)="open(origin, notifications)"
+  class="notifications__toggle toggle-dropdown icon-primary cursor-pointer">
   <mat-icon>notifications</mat-icon>
 </button>
-<ng-template cdkConnectedOverlay [cdkConnectedOverlayOrigin]="trigger" [cdkConnectedOverlayOpen]="isOpen">
+<ng-template #notifications>
   <div class="notifications__dropdown">
-    <div class="notifications__dropdown-header" (click)="$event.stopPropagation()">
-      <span>Notifications</span>
-      <a class="mark-as-read">
+    <div class="notifications__dropdown-header border-secondary">
+      <span class="text-secondary">Notifications</span>
+      <a class="mark-as-read accent">
         Mark all as read
       </a>
     </div>
-    <div class="notifications__body">
-      <ul class="notifications__list">
-        <li class="notifications__item">
-          <a>
-            <div class="notifications__item-image">
-              <img src="assets/images/human/male-1.jpg" alt="">
-            </div>
-            <div class="notifications__item-content">
-              <strong>Hiep Nguyen</strong> marked the task as done
-              <div class="time">
-                a day ago
-              </div>
-            </div>
-          </a>
-        </li>
-        <li class="notifications__item">
-          <a>
-            <div class="notifications__item-image">
-              <img src="assets/images/human/female-1.jpg" alt="">
-            </div>
-            <div class="notifications__item-content">
-              <strong>Dong Hieu</strong> answered to your comment on the Cash Flow Forecast's graph
-              <div class="time">
-                20 minutes ago
-              </div>
-            </div>
-          </a>
-        </li>
-        <li class="notifications__item">
-          <a>
-            <div class="notifications__item-image">
-              <img src="assets/images/human/male-1.jpg" alt="">
-            </div>
-            <div class="notifications__item-content">
-              <strong>Hiep Nguyen</strong> marked the task as done
-              <div class="time">
-                a day ago
-              </div>
-            </div>
-          </a>
-        </li>
-        <li class="notifications__item">
-          <a>
-            <div class="notifications__item-image">
-              <img src="assets/images/human/female-1.jpg" alt="">
-            </div>
-            <div class="notifications__item-content">
-              <strong>Dong Hieu</strong> answered to your comment on the Cash Flow Forecast's graph
-              <div class="time">
-                20 minutes ago
-              </div>
-            </div>
-          </a>
-        </li>
-        <li class="notifications__item">
-          <a>
-            <div class="notifications__item-image">
-              <img src="assets/images/human/male-1.jpg" alt="">
-            </div>
-            <div class="notifications__item-content">
-              <strong>Hiep Nguyen</strong> marked the task as done
-              <div class="time">
-                a day ago
-              </div>
-            </div>
-          </a>
-        </li>
-        <li class="notifications__item">
-          <a>
-            <div class="notifications__item-image">
-              <img src="assets/images/human/female-1.jpg" alt="">
-            </div>
-            <div class="notifications__item-content">
-              <strong>Dong Hieu</strong> answered to your comment on the Cash Flow Forecast's graph
-              <div class="time">
-                20 minutes ago
-              </div>
-            </div>
-          </a>
-        </li>
-        <li class="notifications__item">
-          <a>
-            <div class="notifications__item-image">
-              <img src="assets/images/human/male-1.jpg" alt="">
-            </div>
-            <div class="notifications__item-content">
-              <strong>Hiep Nguyen</strong> marked the task as done
-              <div class="time">
-                a day ago
-              </div>
-            </div>
-          </a>
-        </li>
-        <li class="notifications__item">
-          <a>
-            <div class="notifications__item-image">
-              <img src="assets/images/human/female-1.jpg" alt="">
-            </div>
-            <div class="notifications__item-content">
-              <strong>Dong Hieu</strong> answered to your comment on the Cash Flow Forecast's graph
-              <div class="time">
-                20 minutes ago
-              </div>
-            </div>
-          </a>
-        </li>
-      </ul>
+    <div class="notifications__dropdown-body">
+      <notifications-item *ngFor="let item of newestNotificationList()" [item]="item"></notifications-item>
     </div>
-    <div class="notifications__footer">
+    <div class="notifications__dropdown-footer border-secondary accent">
       <a class="view-all">View All</a>
     </div>
   </div>

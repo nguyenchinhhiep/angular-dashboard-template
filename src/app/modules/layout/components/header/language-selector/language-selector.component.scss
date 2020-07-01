@@ -11,17 +11,17 @@
 
   }
 
-  &__list {
-    margin: 0;
-  }
+}
 
-  &__item {
+.language-selector__dropdown {
+
+  &-item {
     font-size: 1.4rem;
     display: flex !important;
     align-items: center;
   }
-
-  &__image {
+  
+  &-image {
     min-width: 2.7rem;
     width: 2.7rem;
     margin-right: 1.5rem;

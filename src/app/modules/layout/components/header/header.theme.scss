@@ -9,23 +9,13 @@
       $accent: map-get($value, accent);
       $icon-primary: map-get($value, icon-primary);
       $icon-secondary: map-get($value, icon-secondary);
-      $border-color-primary: map-get($value, border-color-primary);
-      $border-color-secondary: map-get($value, border-color-secondary);
+      $border-primary: map-get($value, border-color-primary);
+      $border-secondary: map-get($value, border-color-secondary);
 
       .#{$theme} {
 
           .header {
-              background-color: $background;
-              color: $text-base;
-              border-color: $border-color-secondary !important;
-
-              &__toggle-sidebar {
-                color: $icon-primary;
-              }
-
-              &__toggle-dropdown {
-                color: $icon-primary;
-              }
+    
           }
       }
        

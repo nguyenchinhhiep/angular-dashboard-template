@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 
 import { LAYOUT_CONFIG } from './modules/layout/services/config.service';
 import { layoutConfig } from './layout-config/layout-config';
+import { OverlayModule } from '@angular/cdk/overlay';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { layoutConfig } from './layout-config/layout-config';
   ],
   imports: [
     BrowserModule,
+    OverlayModule,
     BrowserAnimationsModule,
     AppRoutingModule
   ],

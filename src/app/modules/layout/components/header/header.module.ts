@@ -10,10 +10,12 @@ import { SearchComponent } from './search/search.component';
 import { LanguageSelectorComponent } from './language-selector/language-selector.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { OverlayModule } from '@angular/cdk/overlay';
+import { MatDividerModule } from '@angular/material/divider';
+import { NotificationsItemComponent } from './notifications/notifications-item/notifications-item.component';
 
 @NgModule({
-  declarations: [HeaderComponent, UserProfileComponent, NotificationsComponent, SearchComponent, LanguageSelectorComponent],
-  imports: [MatButtonModule, MatMenuModule, MatIconModule,OverlayModule, SharedModule],
+  declarations: [HeaderComponent, UserProfileComponent, NotificationsComponent, SearchComponent, LanguageSelectorComponent, NotificationsItemComponent],
+  imports: [MatButtonModule, MatMenuModule, MatIconModule, OverlayModule, MatDividerModule, SharedModule],
   exports: [HeaderComponent]
 })
 export class HeaderModule { }

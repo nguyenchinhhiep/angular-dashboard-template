@@ -3,48 +3,54 @@
 
   &__toggle {
 
-
     img {
       border-radius: 50%;
     }
-  }
+  }  
+}
 
-  &__dropdown {
+.user-profile__dropdown {
 
-    ul {
-      margin: 0;
-    }
-  }
-
-  
-
-  &__dropdown-header {
+  &-header {
     font-size: 1.4rem;
-    padding: 1rem 1.6rem;
+    padding: 1.6rem;
     border-bottom: 1px solid;
- 
-
+  
     span {
       display: block;
     }
-
+  
     .email {
       font-size: 1.3rem;
       font-weight: 500;
     }
   }
+  
+  &-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-size: 1.4rem;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 1rem 1.6rem;
+    
+    mat-icon {
+      margin-right: 1rem;
+    }
+  }
 
-  &__dropdown-body {
+  &-body {
     padding: 1rem 0;
     border-bottom: 1px solid;
-
    
   }
-
-  &__footer {
-    padding-top: 1rem;
-  }
-
   
-
+  &-footer {
+    padding: 1rem 0;
+  }
 }
+
+
+

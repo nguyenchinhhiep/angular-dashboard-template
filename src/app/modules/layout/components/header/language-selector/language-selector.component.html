@@ -1,13 +1,15 @@
-<button class="language-selector__toggle header__toggle-dropdown" [matMenuTriggerFor]="languageMenu">
+<button #origin (click)="open(origin, languages)"
+  class="language-selector__toggle toggle-dropdown icon-primary cursor-pointer">
   <span>{{selectedLanguage.id}}</span>
 </button>
-<mat-menu #languageMenu="matMenu" class="language-selector__dropdown" xPosition="before">
-  <ul class="language-selector__list">
-    <li mat-menu-item class="language-selector__item" *ngFor="let lang of languages; index as i" (click)="onLanguageChange(i)">
-      <img class="language-selector__image" src="assets/images/languages/{{lang.flag}}.png" alt="{{lang.title}}">
-      <div class="language-selector__title">
+<ng-template #languages>
+  <!-- <ul class="language-selector__dropdown">
+    <li mat-menu-item class="language-selector__dropdown-item" *ngFor="let lang of languages; index as i"
+      (click)="onLanguageChange(i)">
+      <img class="language-selector__dropdown-image" src="assets/images/languages/{{lang.flag}}.png" alt="{{lang.title}}">
+      <div class="language-selector__dropdown-title">
         {{lang.title}}
       </div>
     </li>
-  </ul>
-</mat-menu>
+  </ul> -->
+</ng-template>

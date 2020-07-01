@@ -1,4 +1,5 @@
-import { Component, OnInit, ViewEncapsulation, ViewChild, HostBinding } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, ViewChild, HostBinding, TemplateRef } from '@angular/core';
+import { PopoverService } from 'src/app/shared/components/popover/popover.service';
 
 @Component({
   selector: 'user-profile',
@@ -9,9 +10,20 @@ import { Component, OnInit, ViewEncapsulation, ViewChild, HostBinding } from '@a
 export class UserProfileComponent implements OnInit {
   @HostBinding("class") classes = "user-profile";
 
-  constructor() { }
+  constructor(private _popoverService: PopoverService) { }
 
   ngOnInit(): void {
   }
 
+  open(origin, content: TemplateRef<any>) {
+    const ref = this._popoverService.open<any>({
+      content,
+      origin,
+    });
+
+    ref.afterClosed$.subscribe(res => {
+        console.log(res);
+    })
+
+  }
 }

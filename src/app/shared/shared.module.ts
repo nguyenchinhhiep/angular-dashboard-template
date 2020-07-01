@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { BrowserModule } from '@angular/platform-browser';
+import { SharedComponents } from './components';
+
+
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [...SharedComponents],
   imports: [
     CommonModule
   ],
