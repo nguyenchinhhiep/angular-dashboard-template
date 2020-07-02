@@ -1,8 +1,8 @@
-.notifications {
+.notifications-container {
   display: flex;
 }
 
-.notifications__dropdown {
+.notifications {
   min-width: 36rem!important;
   max-width: 36rem!important;
   border-radius: 4px;
@@ -11,7 +11,7 @@
   display: flex;
   flex-direction: column;
 
-  &-header {
+  &__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -31,12 +31,12 @@
     }
   }
 
-  &-body {
+  &__body {
     flex-grow: 1;
     overflow: auto;
   }
 
-  &-item {
+  &__item {
     display: block;
     cursor: pointer;
     padding: 1.6rem 3rem 1.6rem 1.6rem;
@@ -47,7 +47,7 @@
     &:hover {
       background: rgba($color: #000000, $alpha: .05);
 
-      .notifications__dropdown-item-controls {
+      .notifications__item-controls {
         
         .remove, .status .hasRead {
           opacity: 1 !important;
@@ -56,7 +56,6 @@
         
       }
     }
-
 
     &:last-child {
       border-bottom: none;
@@ -73,6 +72,22 @@
     .time {
       margin-top: .5rem;
       font-size: 1.3rem;
+    }
+
+    &-image {
+      margin-right: 1.6rem;
+  
+      img {
+        min-width: 3.2rem;
+        width: 3.2rem;
+        min-height: 3.2rem;
+        height: 3.2rem;
+        border-radius: 50%;
+      }
+    }
+  
+    &-content {
+      font-size: 1.4rem;
     }
 
     &-controls {
@@ -111,26 +126,11 @@
         }
       }
     }
+ 
     
   }
 
-  &-item-image {
-    margin-right: 1.6rem;
-
-    img {
-      min-width: 3.2rem;
-      width: 3.2rem;
-      min-height: 3.2rem;
-      height: 3.2rem;
-      border-radius: 50%;
-    }
-  }
-
-  &-item-content {
-    font-size: 1.4rem;
-  }
-   
-  &-footer {
+  &__footer {
     font-weight: 500;
     padding: 1.6rem;
     font-size: 1.3rem;

@@ -8,7 +8,7 @@ import { PopoverService } from 'src/app/shared/components/popover/popover.servic
   encapsulation: ViewEncapsulation.None
 })
 export class UserProfileComponent implements OnInit {
-  @HostBinding("class") classes = "user-profile";
+  @HostBinding("class") classes = "user-profile-container";
 
   constructor(private _popoverService: PopoverService) { }
 

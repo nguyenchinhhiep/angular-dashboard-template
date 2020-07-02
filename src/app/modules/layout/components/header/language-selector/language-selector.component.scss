@@ -1,29 +1,27 @@
-.language-selector {
+.language-selector-container {
   display: flex;
 
-  &__toggle {
+  > button {
     
     span {
       text-transform: uppercase;
       font-size: 1.6rem;
       letter-spacing: .5px;
     }
-
   }
-
 }
 
-.language-selector__dropdown {
+.language-selector {
 
-  &-item {
+  &__item {
     font-size: 1.4rem;
     display: flex !important;
     align-items: center;
-  }
-  
-  &-image {
-    min-width: 2.7rem;
-    width: 2.7rem;
-    margin-right: 1.5rem;
+
+    &-image {
+      min-width: 2.7rem;
+      width: 2.7rem;
+      margin-right: 1.5rem;
+    }
   }
 }

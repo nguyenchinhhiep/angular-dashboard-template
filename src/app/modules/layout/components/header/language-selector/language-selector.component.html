@@ -1,13 +1,13 @@
 <button #origin (click)="open(origin, languages)"
-  class="language-selector__toggle toggle-dropdown icon-primary cursor-pointer">
+  class="toggle-dropdown icon-primary cursor-pointer">
   <span>{{selectedLanguage.id}}</span>
 </button>
 <ng-template #languages>
-  <!-- <ul class="language-selector__dropdown">
-    <li mat-menu-item class="language-selector__dropdown-item" *ngFor="let lang of languages; index as i"
+  <!-- <ul class="language-selector">
+    <li mat-menu-item class="language-selector__item" *ngFor="let lang of languages; index as i"
       (click)="onLanguageChange(i)">
-      <img class="language-selector__dropdown-image" src="assets/images/languages/{{lang.flag}}.png" alt="{{lang.title}}">
-      <div class="language-selector__dropdown-title">
+      <img class="language-selector__item-image" src="assets/images/languages/{{lang.flag}}.png" alt="{{lang.title}}">
+      <div class="language-selector__item-content">
         {{lang.title}}
       </div>
     </li>

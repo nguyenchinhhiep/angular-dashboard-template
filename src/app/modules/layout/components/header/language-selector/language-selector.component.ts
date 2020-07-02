@@ -8,7 +8,7 @@ import { PopoverService } from 'src/app/shared/components/popover/popover.servic
   encapsulation: ViewEncapsulation.None
 })
 export class LanguageSelectorComponent implements OnInit {
-  @HostBinding("class") classes = "language-selector";
+  @HostBinding("class") classes = "language-selector-container";
 
   languages: Array<any>;
   selectedLanguage: any;

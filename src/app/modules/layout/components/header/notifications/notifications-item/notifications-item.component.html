@@ -1,20 +1,20 @@
 <a>
-  <div class="notifications__dropdown-item-image">
+  <div class="notifications__item-image">
     <img [src]="item.thumbnail" alt="">
   </div>
-  <div class="notifications__dropdown-item-content">
+  <div class="notifications__item-content">
     <span class="author">{{item.author}}</span>
     {{item.content}}
     <div class="time text-secondary">
       {{item.date}}
     </div>
   </div>
-  <div class="notifications__dropdown-item-controls">
+  <div class="notifications__item-controls">
     <span class="status" (click)="toggleStatus()">
       <mat-icon *ngIf="!item.hasRead" class="text-danger unread">fiber_manual_record</mat-icon>
       <mat-icon *ngIf="item.hasRead" class="icon-secondary hasRead">fiber_manual_record</mat-icon>
     </span>
-    <span class="remove icon-secondary">
+    <span class="remove icon-secondary" (click)="remove()">
       <mat-icon>close</mat-icon>
     </span>
   </div>

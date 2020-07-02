@@ -1,19 +1,19 @@
 <button #origin (click)="open(origin, notifications)"
-  class="notifications__toggle toggle-dropdown icon-primary cursor-pointer">
+  class="toggle-dropdown icon-primary cursor-pointer">
   <mat-icon>notifications</mat-icon>
 </button>
 <ng-template #notifications>
-  <div class="notifications__dropdown">
-    <div class="notifications__dropdown-header border-secondary">
+  <div class="notifications">
+    <div class="notifications__header border-secondary">
       <span class="text-secondary">Notifications</span>
       <a class="mark-as-read accent">
         Mark all as read
       </a>
     </div>
-    <div class="notifications__dropdown-body">
-      <notifications-item *ngFor="let item of newestNotificationList()" [item]="item"></notifications-item>
+    <div class="notifications__body">
+      <notifications-item *ngFor="let item of newestNotificationList()" [item]="item" (onRemove)="itemHasRemove($event)"></notifications-item>
     </div>
-    <div class="notifications__dropdown-footer border-secondary accent">
+    <div class="notifications__footer border-secondary accent">
       <a class="view-all">View All</a>
     </div>
   </div>
