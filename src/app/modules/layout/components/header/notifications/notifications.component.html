@@ -5,13 +5,13 @@
 <ng-template #notifications>
   <div class="notifications">
     <div class="notifications__header border-secondary">
-      <span class="text-secondary">Notifications</span>
+      <span class="text-primary">Notifications</span>
       <a class="mark-as-read accent">
         Mark all as read
       </a>
     </div>
     <div class="notifications__body">
-      <notifications-item *ngFor="let item of newestNotificationList()" [item]="item" (onRemove)="itemHasRemove($event)"></notifications-item>
+      <notifications-item *ngFor="let item of newestNotificationList()" [item]="item"></notifications-item>
     </div>
     <div class="notifications__footer border-secondary accent">
       <a class="view-all">View All</a>

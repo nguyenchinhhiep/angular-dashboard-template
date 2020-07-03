@@ -38,11 +38,7 @@ export class NotificationsComponent implements OnInit {
 
   newestNotificationList() {
     return this.notificationsList.sort((a, b) => {
-      return (<any>a.hasRead == <any>b.hasRead) ? 0 : <any>a.hasRead ? 1 : -1;
+      return (<any>a.isRead == <any>b.isRead) ? 0 : <any>a.isRead ? 1 : -1;
     })
-  }
-
-  itemHasRemove(event: NotificationsItemModel) {
-    this._notificationService.remove(event);
   }
 }

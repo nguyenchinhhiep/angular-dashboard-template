@@ -2,6 +2,7 @@
 
   @each $theme, $value in $themes {
       $background: map-get($value, background );
+      $background-hover: map-get($value, background-hover );
       $primary: map-get($value, primary );
       $text-base: map-get($value, text-base);
       $text-primary: map-get($value, text-primary);
@@ -56,6 +57,10 @@
 
         .background {
           background-color: $background !important;
+        }
+
+        .background-hover:hover {
+          background-color: $background-hover !important;
         }
       }
        

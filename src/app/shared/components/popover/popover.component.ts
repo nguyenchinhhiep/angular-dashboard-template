@@ -8,7 +8,7 @@ import { PopoverContent, PopoverRef } from './popover-ref';
   encapsulation: ViewEncapsulation.None
 })
 export class PopoverComponent implements OnInit {
-  @HostBinding("class") classes = "popover-container border-secondary box-shadow-custom rounded border";
+  @HostBinding("class") classes = "popover-container border-secondary box-shadow-custom border";
   renderMethod: 'template' | 'component' | 'text' = 'component';
   content: PopoverContent;
   context;

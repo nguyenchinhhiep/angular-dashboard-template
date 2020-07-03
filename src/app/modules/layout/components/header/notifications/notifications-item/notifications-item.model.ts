@@ -4,18 +4,18 @@ export class NotificationsItemModel {
   author: string;
   content: string;
   date: string;
-  hasRead: boolean;
+  isRead: boolean;
   
-  constructor(thumbnail: string,content: string, date: string, author: string, hasRead: boolean){
+  constructor(thumbnail: string,content: string, date: string, author: string, isRead: boolean){
     this.thumbnail = thumbnail;
     this.content = content;
     this.date = date;
-    this.hasRead = hasRead;
+    this.isRead = isRead;
     this.author = author
   }
 
   toggleRead() {
-    this.hasRead = !this.hasRead;
+    this.isRead = !this.isRead;
   }
 
 }

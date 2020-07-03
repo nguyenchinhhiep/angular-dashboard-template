@@ -9,21 +9,22 @@ import { NotificationsService } from '../notifications.service';
   encapsulation: ViewEncapsulation.None
 })
 export class NotificationsItemComponent implements OnInit {
-  @HostBinding("class") classes = "notifications__item border-secondary";
+  @HostBinding("class") classes = "notifications__item border-secondary background-hover";
   @Input() item: NotificationsItemModel;
-  @Output() onRemove = new EventEmitter<any>();
   
-  constructor() { }
+  constructor(
+    private _notificationService: NotificationsService
+  ) { }
 
   ngOnInit(): void {
   }
 
   toggleStatus() {
-    this.item.hasRead = !this.item.hasRead;
+    this.item.isRead = !this.item.isRead;
   }
 
   remove() {
-    this.onRemove.emit(this.item);
+    this._notificationService.remove(this.item);
   }
   
 
